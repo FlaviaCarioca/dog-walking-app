@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
             	errors.add(:credit_card, 'is invalid')
 			end
 		else
-			errors.add(:credit_card, 'is invalid')
+			errors.add(:credit_card, 'number and type do not match')
 		end
 	end
 end

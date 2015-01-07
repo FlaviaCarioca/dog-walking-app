@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c33c2887-834a-4852-b367-907facc20cda" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -22,7 +19,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/dog-walking-app@All_specs_in_db__dog_walking_app.coverage" NAME="All specs in db: dog-walking-app Coverage Results" MODIFIED="1420655300929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dog-walking-app" />
-    <SUITE FILE_PATH="coverage/dog-walking-app@spec__dog_walking_app.coverage" NAME="spec: dog-walking-app Coverage Results" MODIFIED="1420664494067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dog-walking-app" />
+    <SUITE FILE_PATH="coverage/dog-walking-app@spec__dog_walking_app.coverage" NAME="spec: dog-walking-app Coverage Results" MODIFIED="1420672732508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dog-walking-app" />
     <SUITE FILE_PATH="coverage/dog-walking-app@Development__dog_walking_app.coverage" NAME="Development: dog-walking-app Coverage Results" MODIFIED="1420654918739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dog-walking-app" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -40,8 +37,8 @@
       <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="810">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+              <caret line="44" column="66" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -50,8 +47,8 @@
       <file leaf-file-name="user_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5985401" vertical-offset="564" max-vertical-offset="1095">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="58" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.4693396" vertical-offset="446" max-vertical-offset="960">
+              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -110,8 +107,8 @@
         <option value="$PROJECT_DIR$/spec/models/address_spec.rb" />
         <option value="$PROJECT_DIR$/spec/models/dog_spec.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150107000218_add_credit_card_type_to_user.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/spec/factories.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
       </list>
     </option>
@@ -671,19 +668,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/models/user_spec.rb</url>
-          <line>62</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/models/user.rb</url>
-          <line>28</line>
-          <option name="timeStamp" value="25" />
+          <line>47</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="26" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="RakeRunConfigurationType">
@@ -986,16 +978,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="810">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="810">
+          <caret line="44" column="66" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5985401" vertical-offset="564" max-vertical-offset="1095">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="58" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.4693396" vertical-offset="446" max-vertical-offset="960">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
           <folding />
         </state>
       </provider>
