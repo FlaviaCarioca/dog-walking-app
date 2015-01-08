@@ -19,9 +19,12 @@ ActiveRecord::Schema.define(version: 20150107000218) do
     t.string   "state_abbrv", limit: 2
     t.string   "city",        limit: 50
     t.string   "zip_code",    limit: 5
+    t.integer  "user_id",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "addresses", ["user_id"], name: "index_addresses_on_user_id"
 
   create_table "comments", force: true do |t|
     t.string   "comment"
@@ -51,7 +54,6 @@ ActiveRecord::Schema.define(version: 20150107000218) do
     t.string   "first_name",                          null: false
     t.string   "last_name",                           null: false
     t.string   "credit_card",                         null: false
-    t.integer  "address_id",                          null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -64,10 +66,9 @@ ActiveRecord::Schema.define(version: 20150107000218) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "credit_card_type",                    null: false
+    t.string   "credit_card_type"
   end
 
-  add_index "users", ["address_id"], name: "index_users_on_address_id"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 

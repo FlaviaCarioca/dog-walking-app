@@ -1,6 +1,5 @@
 class Address < ActiveRecord::Base
-	belongs_to :user, dependent: :destroy
-
+	belongs_to :user
   	validates :street_name, presence: true, length: { maximum: 100 }
   	validates :state_abbrv, presence: true, length: { maximum: 2 }
   	validates :city, presence: true, length: { maximum: 50 }

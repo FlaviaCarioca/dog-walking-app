@@ -11,10 +11,9 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :registerable,
 		 :recoverable, :rememberable, :trackable, :validatable
 
-	has_one :address
+	has_one :address, dependent: :destroy
 	has_many :dogs
 	has_many :walkers, through: :comments
-
 
   	def passes_luhn_test(credit_card)
 		odd_sum = even_sum = 0

@@ -6,8 +6,10 @@ class CreateAddresses < ActiveRecord::Migration
       t.string :state_abbrv, limit: 2
       t.string :city, limit: 50
       t.string :zip_code, limit: 5
-
+	  t.integer :user_id, null: false
+	  
       t.timestamps
-    end
+	end
+	add_index :addresses, :user_id
   end
 end
