@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 	has_many :dogs
 	has_many :comments
 	has_many :walkers, through: :comments
+	accepts_nested_attributes_for :address, allow_destroy: true
 
   	def passes_luhn_test(credit_card)
 		odd_sum = even_sum = 0

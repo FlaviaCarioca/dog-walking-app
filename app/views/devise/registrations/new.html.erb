@@ -1,0 +1,79 @@
+<h2>Sign up</h2>
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :credit_card, "Credit Card Number" %><br />
+    <%= f.text_field :credit_card %>
+  </div>
+
+  <div class="field">
+    <%= f.label :credit_card_type %>
+    <%= f.select :credit_card_type, [['MasterCard', 'mastercard'], ['Visa', 'visa'], ['Amex', 'amex'],
+                                     ['Discover', 'discover'], ['JCB', 'jcb'], ['Diners', 'diners']] %>
+  </div>
+
+
+    <%= f.fields_for :address do |a| %>
+        <div class="field">
+           <%= a.label :street_name, "Street" %>
+           <%= a.text_field :street_name %>
+        </div>
+
+        <div class="field">
+          <%= a.label :apt, "Apartment" %>
+          <%= a.text_field :apt %>
+        </div>
+
+        <div class="'field">
+          <%= a.label :city %>
+          <%= a.text_field :city %>
+        </div>
+
+        <div class="field">
+          <%= a.label :state_abbrv, "State" %>
+          <%= a.select :state_abbrv, options_for_select(us_states, "CA") %>
+        </div>
+
+        <div class="'field">
+          <%= a.label :zip_code %>
+          <%= a.text_field :zip_code %>
+        </div>
+    <% end %>
+
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<!--<%= render "devise/shared/links" %>-->

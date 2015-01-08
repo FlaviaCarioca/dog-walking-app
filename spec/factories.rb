@@ -4,6 +4,7 @@ FactoryGirl.define do
 		last_name 'Banana'
 		email 'ana@banana.com'
 		password 'password123!'
+		password_confirmation 'password123!'
 		credit_card '5201-1964-9220-4971'
 		credit_card_type 'mastercard'
 	end
