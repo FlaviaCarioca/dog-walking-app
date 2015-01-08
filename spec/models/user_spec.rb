@@ -4,8 +4,8 @@ RSpec.describe User, :type => :model do
 
 	context 'associations' do
 		it { should have_one(:address).dependent(:destroy) }
-		# it { should have_many(:walkers) }
-		# it { should have_many(:dogs) }
+		it { should have_many(:dogs) }
+		it { should have_many(:walkers).through(:comments) }
 	end
 
 	context 'validations' do

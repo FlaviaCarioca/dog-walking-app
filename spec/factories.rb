@@ -15,4 +15,36 @@ FactoryGirl.define do
 		zip_code '94110'
 		user
 	end
+
+	factory :dog do
+		name 'Fido'
+		user
+	end
+
+	factory :walker do
+		first_name 'Walker'
+		last_name 'One'
+		price 25.00
+		level
+	end
+
+	factory :walk do
+		time 13
+		date '01/25/15'
+		dog
+		walker
+	end
+
+	factory :level do
+		name 'Beginner'
+		number_of_dogs 5
+	end
+
+	factory :comment do
+		comment 'this is an example of a comment'
+		user
+		walker
+	end
+
+
 end

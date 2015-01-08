@@ -11,5 +11,5 @@ RSpec.describe Address, :type => :model do
 	it { should ensure_length_of(:city).is_at_most(50) }
 	it { should ensure_length_of(:zip_code).is_at_most(5) }
 
-	it { should belong_to(:user) }
+	it { should belong_to(:addressable) }
 end

@@ -14,17 +14,18 @@
 ActiveRecord::Schema.define(version: 20150107000218) do
 
   create_table "addresses", force: true do |t|
-    t.string   "street_name", limit: 100
+    t.string   "street_name",      limit: 100
     t.string   "apt"
-    t.string   "state_abbrv", limit: 2
-    t.string   "city",        limit: 50
-    t.string   "zip_code",    limit: 5
-    t.integer  "user_id",                 null: false
+    t.string   "state_abbrv",      limit: 2
+    t.string   "city",             limit: 50
+    t.string   "zip_code",         limit: 5
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "addresses", ["user_id"], name: "index_addresses_on_user_id"
+  add_index "addresses", ["addressable_id", "addressable_type"], name: "index_addresses_on_addressable_id_and_addressable_type"
 
   create_table "comments", force: true do |t|
     t.string   "comment"
@@ -77,13 +78,11 @@ ActiveRecord::Schema.define(version: 20150107000218) do
     t.string   "last_name"
     t.integer  "level_id"
     t.float    "price"
-    t.integer  "address_id"
     t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "walkers", ["address_id"], name: "index_walkers_on_address_id"
   add_index "walkers", ["comment_id"], name: "index_walkers_on_comment_id"
 
   create_table "walks", force: true do |t|

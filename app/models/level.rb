@@ -1,3 +1,3 @@
 class Level < ActiveRecord::Base
-	belongs_to :walker
+	has_many :walkers
 end
