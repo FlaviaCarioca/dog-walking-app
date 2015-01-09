@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>DogWalkingApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "Happy Pooch" %></title>
 
-<%= render 'layouts/partials/user_widget' %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+    <div class="row">
+
+      <h1>Happy Pooch</h1>
+
+    </div>
+    <div class="row">
+        <%= yield %>
+        <%= javascript_include_tag "application" %>
+        <!--<%= render 'layouts/partials/user_widget' %>-->
+    </div>
+  </body>
+  <footer>
+    <div class="row">
+        <div class="large-6 columns">
+          Copyright 2015 All rights reserved.
+        </div>
+    </div>
+  </footer>
 </html>
