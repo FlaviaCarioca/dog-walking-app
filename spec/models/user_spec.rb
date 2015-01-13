@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe User, :type => :model do
 
 	context 'associations' do
-		it { should have_one(:address).dependent(:destroy) }
-		it { should have_many(:dogs) }
-		it { should have_many(:walkers).through(:comments) }
+		it { is_expected.to have_one(:address).dependent(:destroy) }
+		it { is_expected.to have_many(:dogs) }
+		it { is_expected.to have_many(:walkers).through(:comments) }
 	end
 
 	context 'validations' do
