@@ -12,22 +12,22 @@
   </head>
 
   <body>
-    <div class="row">
-
-      <h1>Happy Pooch</h1>
-
+    <header class="row">
+       <div class="small-5 small-centered columns">
+          <h1>Happy Pooch</h1>
+      </div>
+    </header>
+  <div class="row">
+    <div class="small-9 columns">
+      <%= yield %>
+      <%= javascript_include_tag "application" %>
+      <!--<%= render 'layouts/partials/user_widget' %>-->
     </div>
-    <div class="row">
-        <%= yield %>
-        <%= javascript_include_tag "application" %>
-        <!--<%= render 'layouts/partials/user_widget' %>-->
-    </div>
+  </div>
   </body>
-  <footer>
-    <div class="row">
-        <div class="large-6 columns">
-          Copyright 2015 All rights reserved.
-        </div>
+  <footer class="row">   
+    <div class="small-12 columns">
+      Copyright 2015 All rights reserved.
     </div>
   </footer>
 </html>
