@@ -12,22 +12,65 @@
   </head>
 
   <body>
-    <div class="row">
+    <nav id="top-nav" class="top-bar docs-bar hide-for-small" data-topbar>
+        <ul class="title-area">
+            <li>
+              <h3 class="top-nav-company-title">Happy Pooch Walking Services</h3>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="right">
+               <% if user_signed_in? %>
+                    <li class="divider"></li>
+                    <li><%= link_to 'Log out', destroy_user_session_url, method: :delete %></li>
+               <% else %>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Log In', new_user_session_url %></li>
+               <% end %>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <a href=# class="">Contact</a>
+                    <ul class="dropdown">
+                      <li><a href=#>FAQ</a></li>
+                      <li><a href=#>Videos</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href=# class="">About</a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+    <div class="off-canvas-wrap show-for-small" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar">
+          <section class="middle tab-bar-section">
+            <h1 class="title">Happy Pooch</h1>
+          </section>
 
-      <h1>Happy Pooch</h1>
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
+        </nav>
 
+        <aside class="right-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </aside>
+
+        <a class="exit-off-canvas"></a>
+
+      </div>
     </div>
-    <div class="row">
-        <%= yield %>
-        <%= javascript_include_tag "application" %>
-        <!--<%= render 'layouts/partials/user_widget' %>-->
-    </div>
+    <%= yield %>
+
+    <footer id="footer">
+        <hr width="100%"/>
+        <p class="copyright">&copy; 1998&dash;2015 Happy Pooch, Inc. All rights reserved.</p>
+    </footer>
   </body>
-  <footer>
-    <div class="row">
-        <div class="large-6 columns">
-          Copyright 2015 All rights reserved.
-        </div>
-    </div>
-  </footer>
+
 </html>

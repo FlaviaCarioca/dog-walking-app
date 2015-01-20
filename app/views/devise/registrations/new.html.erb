@@ -1,18 +1,18 @@
 <div class="row">
-    <div class="large-2 large-centered columns">
-        <h2>Sign up</h2>
+    <div class="small-4 medium-4 large-4 small-centered medium-centered large-centered columns">
+        <h3>Sign up</h3>
     </div>
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
     <div class="row">
-        <div class="large-6 columns">
+        <div class="small-6 large-6 columns">
             <%= f.label :first_name %>
             <%= f.text_field :first_name, autofocus: true %>
         </div>
 
-        <div class="large-6 columns">
+        <div class="small-6 large-6 columns">
             <%= f.label :last_name %>
             <%= f.text_field :last_name %>
         </div>
@@ -24,53 +24,53 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-6 columns">
+        <div class="small-6 large-6 columns">
             <%= f.label :password %><% if @validatable %><em>(<%= @minimum_password_length %> characters minimum)</em><% end %>
             <%= f.password_field :password, autocomplete: "off" %>
         </div>
 
-        <div class="large-6 columns"><br/>
+        <div class="small-6 large-6 columns"><br/>
             <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation, autocomplete: "off" %>
         </div>
     </div>
     <div class="row">
-        <div class="large-6 columns">
+        <div class="small-6 large-6 columns">
             <%= f.label :credit_card, "Credit Card Number" %>
             <%= f.text_field :credit_card %>
         </div>
 
-        <div class="large-6 columns">
+        <div class="small-6 large-6 columns">
             <%= f.label :credit_card_type %>
             <%= f.select :credit_card_type, [['MasterCard', 'mastercard'], ['Visa', 'visa'], ['Amex', 'amex'],
                                              ['Discover', 'discover'], ['JCB', 'jcb'], ['Diners', 'diners']] %>
         </div>
     </div>
 
-     <%= f.fields_for :address do |a| %>
+     <%= f.fields_for :address_attributes do |a| %>
         <div class="row">
-            <div class="large-6 columns">
-               <%= a.label :street_name, "Street" %>
+            <div class="small-10 large-10 columns">
+               <%= a.label :street_name, 'Street' %>
                <%= a.text_field :street_name %>
             </div>
 
-            <div class="large-6 columns">
-              <%= a.label :apt, "Apartment" %>
+            <div class="small-2 large-2 columns">
+              <%= a.label :apt, 'Apartment' %>
               <%= a.text_field :apt %>
             </div>
         </div>
         <div class="row">
-            <div class="large-6 columns">
+            <div class="small-6 large-6 columns">
               <%= a.label :city %>
               <%= a.text_field :city %>
             </div>
 
-            <div class="large-6 columns">
-              <%= a.label :state_abbrv, "State" %>
-              <%= a.select :state_abbrv, options_for_select(us_states, "CA") %>
+            <div class="small-3 large-3 columns">
+              <%= a.label :state_abbrv, 'State' %>
+              <%= a.select :state_abbrv, options_for_select(us_states, 'CA') %>
             </div>
 
-            <div class="large-6 columns">
+            <div class="small-3 large-3 columns">
               <%= a.label :zip_code %>
               <%= a.text_field :zip_code %>
             </div>
@@ -78,7 +78,7 @@
     <% end %>
 
     <div class="row">
-          <div class="large-6 columns">
+          <div class="small-6 large-6 columns">
             <%= f.submit "Sign up", class: 'button' %>
           </div>
     </div>
